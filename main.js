@@ -48,6 +48,7 @@ app.get("/subscribers", subscribersController.getAllSubscribers, (req, res, next
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 app.get("/", homeController.index);
 app.get("/interviews", homeController.interviews);
 app.get("/vlogs", homeController.vlogs);
@@ -56,8 +57,7 @@ app.get("/educational-content", homeController.educational_content);
 app.get("/subscribers", subscribersController.getAllSubscribers);
 app.get("/thanks",homeController.thanks);
 app.get("/contact", homeController.contact);
-//Please note, I prefer to post to MongoDB this way as opposed to the
-//way learned in class as it makes more sense to me
+
 app.post("/subscribe", function(req,res){
   console.log(req.body)
   MongoClient.connect(url, function(err, db) {
@@ -72,11 +72,10 @@ app.post("/subscribe", function(req,res){
     return res.redirect('/thanks');
     db.close();
   });
-  //subscribersController.saveSubscriber
-
 });
- app.use(errorController.pageNotFoundError);
- app.use(errorController.internalServerError);
+
+app.use(errorController.pageNotFoundError);
+app.use(errorController.internalServerError);
 
 app.listen(app.get("port"), () => {
   console.log(`Server running at http://localhost:${app.get("port")}`);
