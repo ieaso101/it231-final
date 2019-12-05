@@ -1,0 +1,64 @@
+<script>
+		$(document).ready(function(){
+			$("#slideshow > div:gt(0)").hide();
+			
+			setInterval(function() { 
+				$('#slideshow > div:first')
+					.fadeOut(1000)
+					.next()
+					.fadeIn(1000)
+					.end()
+					.appendTo('#slideshow');
+            },  3000);
+        });
+</script>
+
+<div class="home-page-container">
+<div class="row">
+    <div class="col">
+        
+        <div id="slideshow">
+            <div>
+                <img id="responsive-image" src="/images/IMG_5469.jpg">
+            </div>
+            <div>
+                <img id="responsive-image" src="/images/IMG_9880.jpg">
+            </div>
+            <div>
+                <img id="responsive-image" src="/images/IMG_5749.jpg">
+            </div> 
+            <div>
+                <img id="responsive-image" src="/images/IMG_6671.jpg">
+            </div>
+            <div>
+                <img id="responsive-image" src="/images/IMG_6696.jpg">
+            </div>
+            <div>
+                <img id="responsive-image" src="/images/IMG_9651.jpg">
+            </div>
+            <div>
+                <img id="responsive-image" src="/images/IMG_9800.jpg">
+            </div>
+            <div>
+                <img id="responsive-image" src="/images/IMG_6793.jpg">
+            </div>
+            <div>
+                <img id="responsive-image" src="/images/IMG_0089.jpg">
+            </div>
+         </div>
+    </div>
+    <div class="col">
+        <br>
+        <br>
+        <h2>Hi there!</h2>
+        <p>Nice to meet you! My name is Isaiah Easo, and I am an Information
+            Systems and Computer Science student at DePaul University. In my spare time
+            I work at a marketing agency as an IT professional and corporate videographer.
+        </p>
+        <p>This website is a portfolio of all the different types of videos that I have had
+            the privilege of creating– from vlogs for influencers to client testimonials for companies.
+        </p>
+        <p>Feel free to explore my work, and if you're interested in working together, feel free to <a href="/contact">contact me</a></p>
+    </div>
+</div>
+</div>

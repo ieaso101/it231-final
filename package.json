@@ -1,0 +1,21 @@
+{
+  "name": "3-final_project_easo",
+  "version": "1.0.0",
+  "description": "IT231 - Final Project - Videography by Isaiah Easo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Isaiah Easo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "http-status-codes": "^1.4.0",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.10",
+    "plyr": "^3.5.6"
+  }
+}
